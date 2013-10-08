@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <CheckBox 
+        android:id="@+id/Chk1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check1"
+        />
+    
+    <CheckBox 
+        android:id="@+id/Chk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check2"
+        />
+    
+    <CheckBox 
+        android:id="@+id/Chk3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check3"
+        />
+    
+	 <Button 
+	    android:id="@+id/BtnActivar"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/btnActivar"
+        />
+	 
+	<TextView
+	    android:id="@+id/TxtOpciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnActivar" 
+        />
+        
+</LinearLayout>

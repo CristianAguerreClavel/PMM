@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BotonesRadio</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="btnTextRadios">Radios</string>
+    <string name="btnTextChekeds">Check</string>
+    
+    <string name="Opcion_1">Opcion 1</string>
+    <string name="Opcion_2">Opcion 2</string>
+
+    <string name="check1">Bici</string>
+    <string name="check2">Correr</string>
+    <string name="check3">Nadar</string>
+    
+    <string name="btnActivar">Activar</string>
+    
+     <string name="radioSelect"></string>
+
+</resources>
