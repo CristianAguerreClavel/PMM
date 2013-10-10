@@ -34,7 +34,7 @@ public class MainActivity extends Activity
 			
 			AdaptadorPersonas(Activity context)
 			{
-				super(context, R.layout.listitem_persona);
+				super(context, R.layout.listitem_persona,datos);
 				this.context = context;
 			}
 			
