@@ -4,18 +4,33 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/LblNombre"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20px"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/LblApellido"
         android:layout_width="102dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="12px"
+        android:textSize="20px"
         android:textStyle="normal" />
 
+    <TextView
+        android:id="@+id/LblNombre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30px"
+        android:textStyle="bold" />
+
+     <ImageView
+        android:id="@+id/ImgFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imagen"
+        android:src="@drawable/ic_launcher" />
+    
+    <!-- <ImageView
+        android:id="@+id/ImgFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imagen" /> --> 
+        
+   
+        
 </LinearLayout>
