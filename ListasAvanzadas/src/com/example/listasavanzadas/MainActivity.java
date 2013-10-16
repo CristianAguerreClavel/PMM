@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ public class MainActivity extends Activity
 	{
 		TextView nombre;
 		TextView apellido;
+        ImageView img;
 	}
 	
 	@Override
@@ -33,10 +35,10 @@ public class MainActivity extends Activity
 		
 		final Persona[] datos = new Persona[]
 				{
-					new Persona ("Cristian", "Aguerre Clavel"),
-					new Persona ("Nerea", "Muñoz Lopez"),
-					new Persona ("Cristian", "Gutierrez Marinez"),
-					new Persona ("Cristian", "Aguerre")
+					new Persona ("Cristian", "Aguerre Clavel",R.drawable.ic_launcher),
+					new Persona ("Nerea", "Muñoz Lopez",R.drawable.ic_launcher),
+					new Persona ("Cristian", "Gutierrez Marinez",R.drawable.ic_launcher),
+					new Persona ("Cristian", "Aguerre",R.drawable.ic_launcher)
 				};
 		
 		class AdaptadorPersonas extends ArrayAdapter //Adaptador
@@ -49,7 +51,8 @@ public class MainActivity extends Activity
 				this.context = context;
 			}
 			
-			
+
+
 			public View getView(int position, View convertView, ViewGroup parent)
 			{
 				View item = convertView;
@@ -63,6 +66,7 @@ public class MainActivity extends Activity
 					holder = new ViewHolder();
 					holder.nombre = (TextView)item.findViewById(R.id.LblNombre);
 					holder.apellido = (TextView)item.findViewById(R.id.LblApellido);
+                    holder.img=(ImageView)item.findViewById(R.id.ImgFoto);
 					
 					item.setTag(holder);
 							
@@ -73,6 +77,7 @@ public class MainActivity extends Activity
 				
 				holder.nombre.setText(datos[position].getNombre());
 				holder.apellido.setText(datos[position].getApellido());
+                holder.img.setImageResource(datos[position].getImagen());
 				
 				return(item);
 			}
@@ -122,6 +127,10 @@ public class MainActivity extends Activity
 				super(context, R.layout.listitem_persona,datos);
 				this.context = context;
 			}
+
+            public View getDropDownView(int posicion,View convertView,ViewGroup parent){
+                return getView(posicion,convertView,parent);
+            }
 			
 			public View getView(int position, View convertView, ViewGroup parent)
 			{

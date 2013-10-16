@@ -22,8 +22,7 @@
         android:id="@+id/ImgFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/imagen"
-        android:src="@drawable/ic_launcher" />
+        />
     
     <!-- <ImageView
         android:id="@+id/ImgFoto"
