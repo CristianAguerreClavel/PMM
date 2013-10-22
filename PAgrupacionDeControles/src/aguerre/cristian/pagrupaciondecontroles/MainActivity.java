@@ -35,10 +35,12 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 				return true;
 			case R.id.listas:
-				lblMensaje.setText("Listas");;
+				lblMensaje.setText("Listas");
+                Intent intent2 = new Intent (MainActivity.this, Lista.class);
+                startActivity(intent2);
 				return true;
 			case R.id.acercaDe:
-				lblMensaje.setText("Acerca de");;
+				lblMensaje.setText("Acerca de");
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);

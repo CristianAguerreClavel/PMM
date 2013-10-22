@@ -2,23 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:paddingLeft="20px"
+    android:paddingTop="20px"
+       >
     
    <Button 
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:id="@+id/checkbox"
-       android:text="checkbox"
+       android:id="@+id/botonCheckbox"
+       android:width="320px"
+       android:text="@string/botonCheck"
        />
+
+   <!-- <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="320px"
+        android:id="@+id/botonComboBox"
+        android:text="@string/botonCombo"
+        />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:width="320px"
+        android:layout_height="wrap_content"
+        android:id="@+id/botonRadio"
+        android:text="@string/botonRadio"
+        />
+
        
-  <!--   <Button 
-       android:id="@+id/radioButton"
-       android:text="radio"
-       />
-    
-   <Button 
-       android:id="@+id/comboBox"
-       android:text="combox"
-       />
-    -->
+
 </LinearLayout>

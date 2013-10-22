@@ -10,5 +10,29 @@
     <string name="checkbox">Chekbox</string>
     <string name="radio">Radio</string>
     <string name="combox">ComboBox</string>
-    
+
+
+    <!-- controles_seleccion   -->
+    <string name="botonCheck">Chekcbox</string>
+    <string name="botonCombo">ComboBox</string>
+    <string name="botonRadio">Radio</string>
+
+
+    <!-- xml Checkbox -->
+    <string name="check1">Opcion 1</string>
+    <string name="check2">Opcion 2</string>
+    <string name="check3">Opcion 3</string>
+    <string name="campoTexto"></string>
+    <string name="botonActivar">Activar</string>
+
+    <!--xml Radio -->
+    <string name="radio1">Opcion 1</string>
+    <string name="radio2">Opcion 2</string>
+    <string name="radio3">Opcion 3</string>
+    <string name="texto"></string>
+
+
+
+
+
 </resources>
