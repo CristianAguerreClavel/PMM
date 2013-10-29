@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 				return true;
 			case R.id.listas:
 				lblMensaje.setText("Listas");
-                Intent intent2 = new Intent (MainActivity.this, Lista.class);
+                Intent intent2 = new Intent (MainActivity.this, seleccionDeLista.class);
                 startActivity(intent2);
 				return true;
 			case R.id.acercaDe:

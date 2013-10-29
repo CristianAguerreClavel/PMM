@@ -27,6 +27,11 @@
         <activity android:name=".Chekbox"></activity>
         <activity android:name=".Radio"></activity>
         <activity android:name=".Lista"></activity>
+        <activity android:name=".seleccionDeLista"></activity>
+        <activity android:name=".PersonaActividad"></activity>
+        <activity android:name=".LSpinner"></activity>
+        <activity android:name=".SegundaPantallaSpinner"></activity>
+
     </application>
 
 </manifest>

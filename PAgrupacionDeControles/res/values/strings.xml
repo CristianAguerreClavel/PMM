@@ -31,8 +31,8 @@
     <string name="radio3">Opcion 3</string>
     <string name="texto"></string>
 
-
-
-
+    <!--xml activity_seleccion_de_lista-->
+    <string name="seleccion_lista">Lista</string>
+    <string name="seleccion_spinner">Spinner</string>
 
 </resources>

@@ -5,18 +5,18 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 /**
- * Created by mati on 22/10/13.
+ * Created by nerea on 29/10/13.
  */
-public class PersonaActividad extends Activity {
+public class SegundaPantallaSpinner extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_persona);
+        setContentView(R.layout.activity_segundapantalla);
 
 
         //Localizar los controles
-        TextView nombre = (TextView)findViewById(R.id.personaNombre);
-        TextView apellido = (TextView)findViewById(R.id.personaApellido);
+        TextView nombre = (TextView)findViewById(R.id.personaNombreS);
+        TextView apellido = (TextView)findViewById(R.id.personaApellidoS);
 
         //Accedemos al intent que ha originado la actividad original y recuperamos su informaicon asociada
         Bundle bundle = getIntent().getExtras();

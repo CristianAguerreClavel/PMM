@@ -8,16 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Spinner;
+
 /**
- * Created by mati on 22/10/13.
+ * Created by Cristian on 29/10/13.
  */
-public class Lista extends Activity {
+public class LSpinner extends Activity {
 
     static class ViewHolder
     {
@@ -28,9 +26,10 @@ public class Lista extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista);
+        setContentView(R.layout.activity_spinner);
 
-        final ListView lista1 = (ListView)findViewById(R.id.lista1xml);
+        Spinner spinner = (Spinner)findViewById(R.id.Tspinner);
+
 
         final Persona[] datos = new Persona[]
                 {
@@ -40,14 +39,19 @@ public class Lista extends Activity {
                         new Persona ("Cristian", "Aguerre",R.drawable.ic_launcher)
                 };
 
-        class AdaptadorPersonas extends ArrayAdapter //Adaptador
-        {
+
+        class AdaptadorSpinnerPersona extends ArrayAdapter {
+
             Activity context;
 
-            AdaptadorPersonas(Activity context)
+            AdaptadorSpinnerPersona(Activity context)
             {
-                super(context, R.layout.activity_listpersona,datos);
+                super(context, R.layout.inflado_spinner,datos);
                 this.context = context;
+            }
+
+            public View getDropDownView(int posicion,View convertView,ViewGroup parent){
+                return getView(posicion,convertView,parent);
             }
 
             public View getView(int position, View convertView, ViewGroup parent)
@@ -58,12 +62,11 @@ public class Lista extends Activity {
                 if (item == null)// para mejorar la ejecucion, si ya existe no infla nuevamente
                 {
                     LayoutInflater inflater = context.getLayoutInflater();
-                    item = inflater.inflate(R.layout.activity_listpersona, null);
+                    item = inflater.inflate(R.layout.inflado_spinner, null);
 
                     holder = new ViewHolder();
                     holder.nombre = (TextView)item.findViewById(R.id.LblNombre);
                     holder.apellido = (TextView)item.findViewById(R.id.LblApellido);
-                    holder.img=(ImageView)item.findViewById(R.id.ImgFoto);
 
                     item.setTag(holder);
 
@@ -74,26 +77,46 @@ public class Lista extends Activity {
 
                 holder.nombre.setText(datos[position].getNombre());
                 holder.apellido.setText(datos[position].getApellido());
-                holder.img.setImageResource(datos[position].getImagen());
 
                 return(item);
             }
+
         }
+        AdaptadorSpinnerPersona adaptadorSpin = new AdaptadorSpinnerPersona(this);
+        spinner.setAdapter(adaptadorSpin);
 
-        AdaptadorPersonas adaptador = new AdaptadorPersonas(this);
-        lista1.setAdapter(adaptador);
-
-        //oyente de la lista
-        lista1.setOnItemClickListener(new OnItemClickListener() {
-
+       /* spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> a, View v, int position,long id) {
+            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
                 //Alternativa 1
                 String nombre = ((Persona)a.getAdapter().getItem(position)).getNombre();
                 String apellido = ((Persona)a.getAdapter().getItem(position)).getApellido();
                 //bundle para pasar los datos a la actividad persona
                 //Creamos el Itent
-                Intent intent = new Intent (Lista.this, PersonaActividad.class);
+                Intent intent = new Intent (LSpinner.this, SegundaPantallaSpinner.class);
+
+                //Creamos la informacion a pasar entre actividades
+                Bundle b = new Bundle();
+                b.putString("NOMBRE", nombre.toString());
+                b.putString("APELLIDO", apellido.toString());
+
+                //Añadimos la informacion al intent
+                intent.putExtras(b);
+
+                //Iniciamos la nueva actividad
+                startActivity(intent);
+            }
+        });*/
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> a, View v, int position, long id) {
+                //Alternativa 1
+                String nombre = ((Persona)a.getAdapter().getItem(position)).getNombre();
+                String apellido = ((Persona)a.getAdapter().getItem(position)).getApellido();
+                //bundle para pasar los datos a la actividad persona
+                //Creamos el Itent
+                Intent intent = new Intent (LSpinner.this, SegundaPantallaSpinner.class);
 
                 //Creamos la informacion a pasar entre actividades
                 Bundle b = new Bundle();
@@ -107,6 +130,10 @@ public class Lista extends Activity {
                 startActivity(intent);
             }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
         });
 
 
@@ -114,3 +141,5 @@ public class Lista extends Activity {
 
 
 }
+
+
