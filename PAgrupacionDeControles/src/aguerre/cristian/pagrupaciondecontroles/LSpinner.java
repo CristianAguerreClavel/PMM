@@ -33,6 +33,7 @@ public class LSpinner extends Activity {
 
         final Persona[] datos = new Persona[]
                 {
+                        new Persona ("SELECCIONE UNA PERSONA",null,0),
                         new Persona ("Cristian", "Aguerre Clavel",R.drawable.ic_launcher),
                         new Persona ("Nerea", "Muñoz Lopez",R.drawable.ic_launcher),
                         new Persona ("Cristian", "Gutierrez Marinez",R.drawable.ic_launcher),
