@@ -32,6 +32,7 @@
         <activity android:name=".LSpinner"></activity>
         <activity android:name=".SegundaPantallaSpinner"></activity>
 
+
     </application>
 
 </manifest>

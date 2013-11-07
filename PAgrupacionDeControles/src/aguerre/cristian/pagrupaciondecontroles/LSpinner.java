@@ -33,7 +33,6 @@ public class LSpinner extends Activity {
 
         final Persona[] datos = new Persona[]
                 {
-                        new Persona ("SELECCIONE UNA PERSONA",null,0),
                         new Persona ("Cristian", "Aguerre Clavel",R.drawable.ic_launcher),
                         new Persona ("Nerea", "Muñoz Lopez",R.drawable.ic_launcher),
                         new Persona ("Cristian", "Gutierrez Marinez",R.drawable.ic_launcher),
@@ -86,28 +85,6 @@ public class LSpinner extends Activity {
         AdaptadorSpinnerPersona adaptadorSpin = new AdaptadorSpinnerPersona(this);
         spinner.setAdapter(adaptadorSpin);
 
-       /* spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
-                //Alternativa 1
-                String nombre = ((Persona)a.getAdapter().getItem(position)).getNombre();
-                String apellido = ((Persona)a.getAdapter().getItem(position)).getApellido();
-                //bundle para pasar los datos a la actividad persona
-                //Creamos el Itent
-                Intent intent = new Intent (LSpinner.this, SegundaPantallaSpinner.class);
-
-                //Creamos la informacion a pasar entre actividades
-                Bundle b = new Bundle();
-                b.putString("NOMBRE", nombre.toString());
-                b.putString("APELLIDO", apellido.toString());
-
-                //Añadimos la informacion al intent
-                intent.putExtras(b);
-
-                //Iniciamos la nueva actividad
-                startActivity(intent);
-            }
-        });*/
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
