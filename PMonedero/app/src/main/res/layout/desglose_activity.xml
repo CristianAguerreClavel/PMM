@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginLeft="20px">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="DESGLOSE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/labelCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:text="Candtidad a desglosar:  "/>
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/labelCantidad"
+        android:layout_below="@+id/title"
+        android:textColor="#DF0101"
+        />
+
+    <TextView
+        android:id="@+id/labelQuinientos"
+        android:layout_below="@+id/labelCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 500€:  "/>
+    <TextView
+        android:id="@+id/quinientos"
+        android:layout_below="@+id/labelCantidad"
+        android:layout_toRightOf="@id/labelQuinientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelDoscientos"
+        android:layout_below="@+id/labelQuinientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 200€:  "/>
+    <TextView
+        android:id="@+id/doscientos"
+        android:layout_below="@+id/labelQuinientos"
+        android:layout_toRightOf="@id/labelDoscientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelCien"
+        android:layout_below="@+id/labelDoscientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 100€:  "/>
+    <TextView
+        android:id="@+id/cien"
+        android:layout_below="@+id/labelDoscientos"
+        android:layout_toRightOf="@id/labelCien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelCincuenta"
+        android:layout_below="@+id/labelCien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 50€:  "/>
+    <TextView
+        android:id="@+id/cincuenta"
+        android:layout_below="@+id/labelCien"
+        android:layout_toRightOf="@id/labelCincuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelVeinte"
+        android:layout_below="@+id/labelCincuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 20€:  "/>
+    <TextView
+        android:id="@+id/veinte"
+        android:layout_below="@+id/labelCincuenta"
+        android:layout_toRightOf="@id/labelVeinte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelDiez"
+        android:layout_below="@+id/labelVeinte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 10€:  "/>
+    <TextView
+        android:id="@+id/diez"
+        android:layout_below="@+id/labelVeinte"
+        android:layout_toRightOf="@id/labelDiez"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelCinco"
+        android:layout_below="@+id/labelDiez"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 5€:  "/>
+    <TextView
+        android:id="@+id/cinco"
+        android:layout_below="@+id/labelDiez"
+        android:layout_toRightOf="@id/labelCinco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelDos"
+        android:layout_below="@+id/labelCinco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 2€:  "/>
+    <TextView
+        android:id="@+id/dos"
+        android:layout_below="@+id/labelCinco"
+        android:layout_toRightOf="@id/labelDos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/labelUno"
+        android:layout_below="@+id/labelDos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billetes de 1€:  "/>
+    <TextView
+        android:id="@+id/uno"
+        android:layout_below="@+id/labelDos"
+        android:layout_toRightOf="@id/labelUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+</RelativeLayout>

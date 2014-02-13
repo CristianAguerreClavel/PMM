@@ -1,0 +1,63 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRANSPORTES ANDROID"
+        android:textSize="25px"
+        />
+
+    <Spinner
+        android:id="@+id/spinerZona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        />
+
+    <RadioGroup android:id="@+id/radioTarifa"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinerZona">
+
+        <RadioButton android:id="@+id/tarifaNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tarifaNormal" />
+
+        <RadioButton android:id="@+id/tarifaUrgente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tarifaUrgente" />
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkRegalo"
+        android:text="Caja Regalo"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textoPeso" />
+
+    <EditText
+        android:id="@+id/textoPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoPeso"
+        android:minWidth="200px"
+        android:layout_below="@+id/checkRegalo"/>
+    <Button
+        android:id="@+id/botonCalculos"
+        android:text="@string/calculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textoPeso"/>
+
+
+
+</RelativeLayout>

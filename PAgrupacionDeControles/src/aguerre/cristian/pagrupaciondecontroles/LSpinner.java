@@ -50,7 +50,7 @@ public class LSpinner extends Activity {
                 this.context = context;
             }
 
-            public View getDropDownView(int posicion,View convertView,ViewGroup parent){
+            public View getDropDownView(int posicion,View convertView,ViewGroup parent){//Cuando se despliega el spinner
                 return getView(posicion,convertView,parent);
             }
 
