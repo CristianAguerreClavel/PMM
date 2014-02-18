@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
 /*-----------------------------------------------------------------------------------------------------*/
 /* ---------------------------------------SPINNER -----------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
-       /* Spinner spinner = (Spinner)findViewById(R.id.spinerZona);
+       Spinner spinner = (Spinner)findViewById(R.id.spinerZona);
 
         final Destino[] datos = new Destino[]
         {

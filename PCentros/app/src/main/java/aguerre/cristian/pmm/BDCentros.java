@@ -51,7 +51,7 @@ public class BDCentros extends SQLiteOpenHelper {
         miTabla.close();
     }
 
-    public void insertarCentro(int id, String tipoCentro, String nombre, String direccion, String telefono, int numPlazas){
+    public  void insertarCentro(int id, String tipoCentro, String nombre, String direccion, String telefono, int numPlazas){
         miTabla = getWritableDatabase();
         if (miTabla != null){
             ContentValues valores = new ContentValues();

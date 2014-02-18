@@ -47,7 +47,8 @@ public class AccionesCentros extends Activity {
         btnInsertarCentros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //TODO Insertar centro
+              Intent intentInsertar = new Intent(AccionesCentros.this,ActivityInsertarCentro.class);
+              startActivity(intentInsertar);
             }
         });
 
@@ -65,15 +66,6 @@ public class AccionesCentros extends Activity {
                 bdCentros.insertDefault();
             }
         });
-
-        btnInsertarCentros.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AccionesCentros.this, ActivityInsertarCentro.class);
-            }
-        });
-
-
 
     }
 }

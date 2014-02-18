@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/LabelCodCentro"
+        android:id="@+id/labelCodCentro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Codigo"/>
@@ -14,10 +14,73 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-    <!--"cod_centro","tipo_centro","nombre","direccion","telefono","num_plazas"-->
-    <TextView/>
-        android:id="@+id/label"
+
+   <TextView
+       android:id="@+id/labelTipo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Tipo de centro"
+   />
+    <EditText
+        android:id="@+id/editTipo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+    />
+
+    <TextView
+        android:id="@+id/labelNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de centro"
+        />
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/labelDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direccion de centro"
+        />
+    <EditText
+        android:id="@+id/editDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/labelTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono de centro"
+        />
+    <EditText
+        android:id="@+id/editTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/labelNumPlazas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numero de plazas"
+        />
+    <EditText
+        android:id="@+id/editNumPlazas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:text="Insertar"
+        android:id="@+id/btnInsert"
+        android:layout_gravity="right" />
 
 </LinearLayout>
+

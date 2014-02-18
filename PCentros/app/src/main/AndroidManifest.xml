@@ -20,6 +20,9 @@
         <activity android:name=".VerCentros"></activity>
         <activity android:name=".ActivityBorrarCentro"></activity>
         <activity android:name=".ActivityInsertarCentro"></activity>
+        <activity android:name=".AccionesPersonal"></activity>
+        <activity android:name=".VerPersonal"></activity>
+        <activity android:name=".ActivityBorrarPersona"></activity>
     </application>
 
 </manifest>

@@ -20,10 +20,10 @@
         android:text="BASE DE DATOS CENTROS"/>
 
     <Button
-        android:id="@+id/btnAccionesSql"
+        android:id="@+id/btnBDPersonal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OTRA BD"/>
+        android:text="BASE DE DATOS PERSONAL"/>
 
 
 </LinearLayout>

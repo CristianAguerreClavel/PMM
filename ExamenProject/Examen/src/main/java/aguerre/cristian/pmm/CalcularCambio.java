@@ -4,39 +4,64 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by Cristian Aguerre Clavel on 14/01/14.
  */
 public class CalcularCambio extends Activity {
+    private TextView cantidadMonedas;
+    private int[] modenas = {500,200,100,50,20,10,5,2,1};
+    private int[] resultado = {0,0,0,0,0,0,0,0,0};
 
-    int[] monedas = new int[]{500,200,100,50,20,10,5,2,1};
-    int[] cantidadMonedas = new int[]{0,0,0,0,0,0,0,0,0};
-    EditText ed;
-
-    public void onCreate(Bundle savedInstaceState){
-        super.onCreate(savedInstaceState);
+    protected void onCreate(Bundle bundle){
+        super.onCreate(bundle);
         setContentView(R.layout.calcularcambio_xml);
-        ed = (EditText)findViewById(R.id.monedasNecesarias);
-
-        int cantidad = 100;
-        calculoCambio(cantidad);
-
+        cantidadMonedas = (TextView)findViewById(R.id.cantidad);
+        setCantidad();
+        desglosarCantidad();
+        setResultado();
     }
 
+    public void setCantidad(){
+        Bundle bundle = getIntent().getExtras();
+        String dineroRecibido = String.valueOf(bundle.getInt("money"));
 
-    public void calculoCambio(int cantidad){
-        while (cantidad <0){
-            for (int i = 0; i<monedas.length;i++){
-                if(cantidad % monedas[i]==0){
-                    cantidadMonedas[i]++;
-                }
+        cantidadMonedas.setText(dineroRecibido);
+    }
+
+    public void desglosarCantidad(){
+        int cantidad=Integer.valueOf(cantidadMonedas.getText().toString());
+        for (int i = 0; i <modenas.length;){
+            if(cantidad-modenas[i]>=0){
+                resultado[i]++;
+                cantidad = cantidad-modenas[i];
+            }else{
+                i++;
             }
         }
-
-        for (int j=0; j<cantidadMonedas.length;j++){
-            ed.setText(ed+ "," +String.valueOf((cantidadMonedas[j])));
-        }
+        //setResultado();
     }
 
+    public void setResultado(){
+        TextView tQuinientos = (TextView)findViewById(R.id.quinientos);
+        TextView tDoscientos = (TextView)findViewById(R.id.doscientos);
+        TextView tCien = (TextView)findViewById(R.id.cien);
+        TextView tCincuenta = (TextView)findViewById(R.id.cincuenta);
+        TextView tVeinte = (TextView)findViewById(R.id.veinte);
+        TextView tDiez = (TextView)findViewById(R.id.diez);
+        TextView tCinco = (TextView)findViewById(R.id.cinco);
+        TextView tDos = (TextView)findViewById(R.id.dos);
+        TextView tUno = (TextView)findViewById(R.id.uno);
+
+        tQuinientos.setText(String.valueOf(resultado[0]));
+        tDoscientos.setText(String.valueOf(resultado[1]));
+        tCien.setText(String.valueOf(resultado[2]));
+        tCincuenta.setText(String.valueOf(resultado[3]));
+        tVeinte.setText(String.valueOf(resultado[4]));
+        tDiez.setText(String.valueOf(resultado[5]));
+        tCinco.setText(String.valueOf(resultado[6]));
+        tDos.setText(String.valueOf(resultado[7]));
+        tUno.setText(String.valueOf(resultado[8]));
+    }
 }

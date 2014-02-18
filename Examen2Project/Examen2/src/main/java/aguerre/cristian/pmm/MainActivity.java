@@ -25,18 +25,18 @@ import android.view.View.OnClickListener;
 
 public class MainActivity extends ActionBarActivity {
 
-   /* static class ViewHolder
+    static class ViewHolder
     {
         TextView zona;
         TextView continente;
         TextView precio;
-    }*/
+    }
 
-    /*int precioZona = 0;
+    int precioZona = 0;
     String zona = "";
     String continente = "";
     int opRadio = 0;
-    final EditText textoPeso = (EditText)findViewById(R.id.textoPeso);*/
+    final EditText textoPeso = (EditText)findViewById(R.id.textoPeso);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
 /*-----------------------------------------------------------------------------------------------------*/
 /* ---------------------------------------SPINNER -----------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
-       /* Spinner spinner = (Spinner)findViewById(R.id.spinerZona);
+       Spinner spinner = (Spinner)findViewById(R.id.spinerZona);
 
         final Destino[] datos = new Destino[]
         {
@@ -107,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
 /*-----------------------------------------------------------------------------------------------------*/
 /*--------------------------------------RADIO BUTTONS--------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
-     /*   final RadioGroup rg = (RadioGroup)findViewById(R.id.radioTarifa);
+        final RadioGroup rg = (RadioGroup)findViewById(R.id.radioTarifa);
         final RadioButton tarifaN = (RadioButton)findViewById(R.id.tarifaNormal);
         final RadioButton tarifaU = (RadioButton)findViewById(R.id.tarifaUrgente);
 
@@ -125,7 +125,7 @@ public class MainActivity extends ActionBarActivity {
 /*-----------------------------------------------------------------------------------------------------*/
 /*-------------------------------------ZONA SELECCIONADA-----------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
-        /*
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> a, View v, int position, long id) {
@@ -143,12 +143,12 @@ public class MainActivity extends ActionBarActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
-*/
+
         /*-----------------------------------------------------------------------------------------------------*/
 /*-----------------------------------BUTTON Y PASO DE INFORMACION--------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 
-        /*final Button calcular = (Button)findViewById(R.id.botonCalculos);
+        final Button calcular = (Button)findViewById(R.id.botonCalculos);
 
         calcular.setOnClickListener(new OnClickListener(){
 
@@ -173,12 +173,12 @@ public class MainActivity extends ActionBarActivity {
         });
 
 
-    }*/
+    }
 /*-----------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------CALCULOS--------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 
-/*
+
 public double calcularPrecio(){
     double res;
     double extra = 0;
@@ -198,8 +198,7 @@ public double calcularPrecio(){
         res = res + porcentaje;
     }
     return res;
-}*/
-/*
+}
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
@@ -219,7 +218,7 @@ public double calcularPrecio(){
         }
         return super.onOptionsItemSelected(item);
     }
-*/
+
 
 
     }}

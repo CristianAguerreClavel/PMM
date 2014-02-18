@@ -58,6 +58,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textoPeso"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/titulo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="28dp"
+        android:src="@drawable/bola_del_mundo"/>
 
 
 </RelativeLayout>
